@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9e6c8f61cb.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/fevicon.png" type="image/icon">
+    <title>I am Thermometer</title>
+
+    <style>
+        body{
+            background-color: #B39F9F;
+        }
+        h1 {
+            font-size: 115px;
+            margin: 110px;
+            font-family: system-ui;
+            color: white;
+            margin-left: 135px;
+            margin-top: 175px;
+        }
+
+        span {
+            font-size: 150px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="heading">I am <br> Thermometer <span id="images"></span></h1>
+
+    <script>
+        const tempLoad =()=>{
+            let temp = document.getElementById('images'); 
+            temp.innerHTML = `<i class="fa-solid fa-temperature-empty"></i>`;
+            temp.style.color= "#fff"
+
+            setTimeout(()=> {
+                temp.innerHTML = `<i class="fa-solid fa-temperature-empty"></i>`;
+                temp.style.color= "#fff"},1000);
+            setTimeout(()=> {
+                temp.innerHTML = `<i class="fa-solid fa-temperature-quarter"></i>`; 
+                temp.style.color="#64A977"},2000);
+            setTimeout(()=> {
+                temp.innerHTML = `<i class="fa-solid fa-temperature-half"></i>`;
+                temp.style.color="#CBC837"},3000);
+            setTimeout(()=> {
+                temp.innerHTML = `<i class="fa-solid fa-temperature-three-quarters"></i>`;
+                temp.style.color="#C4274E"},4000);
+            setTimeout(()=> {
+                temp.innerHTML = `<i class="fa-solid fa-temperature-full"></i>`;
+                temp.style.color="#D10000"},5000);
+        
+        }
+        tempLoad();
+
+        setInterval(tempLoad, 6000);
+    
+    </script>
+</body>
+</html>
